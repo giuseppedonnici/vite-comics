@@ -71,6 +71,8 @@ main {
     }
     
     .cta {
+        position: relative;
+        z-index: 1;
         height: 150px;
         color: white;
         background-color: $primary;
