@@ -63,12 +63,14 @@ export default {
 <template>
     <header>
         <div class="container">
-            <img src="../assets/img/dc-logo.png" alt="">
-            <ul>
-                <li v-for="link in links" :class="link.current ? 'active' : ''">
-                    <a :href="link.url">{{ link.text }}</a>
-                </li>
-            </ul>
+            <div class="nav-bar">
+                <img src="../assets/img/dc-logo.png" alt="">
+                <ul>
+                    <li v-for="link in links" :class="link.current ? 'active' : ''">
+                        <a :href="link.url">{{ link.text }}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 </template>
@@ -79,13 +81,11 @@ export default {
 header {
     height: 100px;
     background-color: white;
-    .container {
+    .nav-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 60%;
         height: 100%;
-        margin: 0 auto;
     }
 
     img {

@@ -60,12 +60,6 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
 
-.container {
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-}
-
 main {
     .content {
         line-height: 100px;
