@@ -99,7 +99,6 @@ header {
         font-size: .7rem;
         font-weight: bold;
         font-stretch: ultra-condensed;
-        list-style-type: none;
 
         li {
             &.active {
@@ -113,8 +112,6 @@ header {
     
             a {
                 line-height: 100px;
-                text-decoration: none;
-                color: inherit;
             }
         }
     }
