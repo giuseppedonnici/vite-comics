@@ -4,6 +4,37 @@ export default {
     name: "AppMain",
     components: {
         AppContent
+    },
+    data() {
+        return {
+            ctaArray: [
+                {
+                    image: "buy-comics-digital-comics.png",
+                    title: "digital comics"
+                },
+                {
+                    image: "buy-comics-merchandise.png",
+                    title: "dc merchandise"
+                },
+                {
+                    image: "buy-comics-subscriptions.png",
+                    title: "subscription"
+                },
+                {
+                    image: "buy-comics-shop-locator.png",
+                    title: "comic shop locator"
+                },
+                {
+                    image: "buy-dc-power-visa.svg",
+                    title: "dc power visa"
+                }
+            ]
+        }
+    },
+    methods: {
+        getImagePath(imageName) {
+            return new URL(`../assets/img/${imageName}`, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -24,38 +55,13 @@ export default {
         <div class="cta">
             <div class="container">
                 <ul>
-                    <li>
+                    <li v-for="cta in ctaArray">
                         <a href="#">
-                            <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                            <span>DIGITAL COMICS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                            <span>DC MERCHANDISE</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                            <span>SUBSCRIPTION</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                            <span>COMIC SHOP LOCATOR</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                            <span>DC POWER VISA</span>
+                            <img :src="getImagePath( cta.image )" alt="">
+                            <span>{{ cta.title }}</span>
                         </a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </main>
@@ -113,6 +119,7 @@ main {
         span {
             display: inline-block;
             font-size: .7rem;
+            text-transform: uppercase;
             padding-left: .7rem;
         }
     }
