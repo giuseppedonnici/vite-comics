@@ -14,6 +14,7 @@ export default {
         <div class="up">
             <div class="container">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
+                
             </div>
         </div>
 

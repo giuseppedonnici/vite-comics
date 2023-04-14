@@ -1,19 +1,25 @@
 <script>
+import AppContent from './AppContent.vue';
 export default {
     name: "AppMain",
-    data() {
-        return {
-            
-        }
+    components: {
+        AppContent
     }
 }
 </script>
 
 <template>
     <main>
+        <div class="jumbotron">
+
+        </div>
+
+        
+
         <div class="content">
             <div class="container">
             --> Content goes here &lt;--
+            <AppContent />
             </div>
         </div>
 
@@ -60,11 +66,15 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
 
+.jumbotron {
+    height: 300px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
+}
+
 main {
     .content {
-        line-height: 100px;
         color: white;
-        font-size: 2rem;
         font-weight: bold;
         font-stretch: ultra-condensed;
         background-color: black;
