@@ -14,11 +14,9 @@ export default {
 
         </div>
 
-        
-
         <div class="content">
             <div class="container">
-            --> Content goes here &lt;--
+            <a class=" btn" href="#">CURRENT SERIES</a>
             <AppContent />
             </div>
         </div>
@@ -66,15 +64,30 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
 
-.jumbotron {
-    height: 300px;
-    background-image: url(../assets/img/jumbotron.jpg);
-    background-size: cover;
-}
 
 main {
+    .jumbotron {
+        height: 300px;
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-size: cover;
+    }
+
+    .container {
+        position: relative;
+    }
+    a {
+        &.btn {
+            display: inline-block;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            padding: 10px 25px;
+            background-color: $primary;
+        }
+    }
     .content {
         color: white;
+        padding: 2rem 0;
         font-weight: bold;
         font-stretch: ultra-condensed;
         background-color: black;

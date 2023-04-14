@@ -20,9 +20,11 @@ export default {
   .card {
     width: calc(100% / 6 - 10px);
     margin: 5px;
+    margin-bottom: 2rem;
     img {
         width: 100%;
-        height: 120px;
+        height: 150px;
+        object-fit: cover;
     }
     h3 {
         font-size: .7rem;
