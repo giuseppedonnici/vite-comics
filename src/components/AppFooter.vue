@@ -82,7 +82,19 @@ export default {
 
         <div class="down">
             <div class="container">
-
+                <a href="#" class="btn">sign-up now!</a>
+                <ul>
+                    <li>
+                        <h3>
+                            follow us
+                        </h3>
+                    </li>
+                    <li>fb</li>
+                    <li>twitter</li>
+                    <li>youtube</li>
+                    <li>pinterest</li>
+                    <li>loc</li>
+                </ul>
             </div>
         </div>
 
@@ -90,7 +102,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../style/partials/variables";
+@use "../style/partials/variables" as *;
 
 footer {
     .up {
@@ -123,6 +135,33 @@ footer {
                         cursor: default;
                     }
                 }
+
+            }
+        }
+    }
+
+    .down {
+        position: relative;
+        z-index: 1;
+        height: 100px;
+        background-color: #303030;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a.btn {
+                text-transform: uppercase;
+                color: white;
+                border: 2px solid $primary;
+                padding: 15px;
+            }
+            ul {
+                display: flex;
+                gap: 1rem;
+            }
+            h3 {
+                color: $primary;
+                text-transform: uppercase;
 
             }
         }
