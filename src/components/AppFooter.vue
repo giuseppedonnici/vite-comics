@@ -89,11 +89,21 @@ export default {
                             follow us
                         </h3>
                     </li>
-                    <li>fb</li>
-                    <li>twitter</li>
-                    <li>youtube</li>
-                    <li>pinterest</li>
-                    <li>loc</li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-youtube"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-pinterest"></i>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -157,12 +167,17 @@ footer {
             }
             ul {
                 display: flex;
+                align-items: center;
                 gap: 1rem;
+                i {
+                    font-size: 30px;
+                    filter: invert(50%);
+                    cursor: pointer;
+                }
             }
             h3 {
                 color: $primary;
                 text-transform: uppercase;
-
             }
         }
     }
