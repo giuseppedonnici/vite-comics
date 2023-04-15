@@ -55,7 +55,7 @@ export default {
         <div class="cta">
             <div class="container">
                 <ul>
-                    <li v-for="cta in ctaArray">
+                    <li v-for="(cta, index) in ctaArray" :key="index">
                         <a href="#">
                             <img :src="getImagePath( cta.image )" alt="">
                             <span>{{ cta.title }}</span>
