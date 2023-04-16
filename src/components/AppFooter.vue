@@ -180,11 +180,6 @@ footer {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                i {
-                    font-size: 30px;
-                    filter: invert(50%);
-                    cursor: pointer;
-                }
             }
             h3 {
                 color: $primary;
