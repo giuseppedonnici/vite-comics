@@ -180,6 +180,9 @@ footer {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+                img {
+                    cursor: pointer;
+                }
             }
             h3 {
                 color: $primary;
