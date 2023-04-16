@@ -77,14 +77,16 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixins" as *;
 
 header {
     height: 100px;
     background-color: white;
     .nav-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex(space-between, center);
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
         height: 100%;
     }
 
@@ -115,7 +117,5 @@ header {
             }
         }
     }
-
-
 }
 </style>

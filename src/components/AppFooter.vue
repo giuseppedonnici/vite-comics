@@ -113,6 +113,7 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixins" as *;
 
 footer {
     .up {
@@ -156,9 +157,10 @@ footer {
         height: 100px;
         background-color: #303030;
         .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex(space-between, center);
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
             a.btn {
                 text-transform: uppercase;
                 color: white;

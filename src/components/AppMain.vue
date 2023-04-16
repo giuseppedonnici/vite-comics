@@ -69,6 +69,7 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixins" as *;
 
 
 main {
@@ -106,9 +107,10 @@ main {
         color: white;
         background-color: $primary;
         ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex(center, center);
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
             gap: 3rem;
             height: 100%;
         }

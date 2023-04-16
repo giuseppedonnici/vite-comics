@@ -99,17 +99,20 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixins" as *;
 
 .row {
-    display: flex;
+    @include flex(row, center);
+    // display: flex;
+    // justify-content: center;
     flex-wrap: wrap;
-    justify-content: center;
     padding: .5rem 0;
 }
 
 .btn-container {
-    display: flex;
-    justify-content: center;
+    @include flex(center);
+    // display: flex;
+    // justify-content: center;
     .btn {
         display: inline-block;
         padding: 10px 80px;
