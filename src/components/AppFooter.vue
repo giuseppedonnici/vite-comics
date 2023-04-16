@@ -3,7 +3,28 @@ export default {
     name: "AppFooter",
     data() {
         return {
-            
+            logos: [
+                {
+                    image: "footer-facebook.png"
+                },
+                {
+                    image: "footer-twitter.png"
+                },
+                {
+                    image: "footer-youtube.png"
+                },
+                {
+                    image: "footer-pinterest.png"
+                },
+                {
+                    image: "footer-periscope.png"
+                },
+            ]
+        }
+    },
+    methods: {
+        getImagePath(imageName) {
+            return new URL(`../assets/img/${imageName}`, import.meta.url).href;
         }
     }
 }
@@ -89,20 +110,8 @@ export default {
                             follow us
                         </h3>
                     </li>
-                    <li>
-                        <i class="fa-brands fa-facebook"></i>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-square-twitter"></i>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-youtube"></i>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-pinterest"></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
+                    <li v-for="(logo, index) in logos" :key="index">
+                        <img :src="getImagePath(logo.image)" alt="">
                     </li>
                 </ul>
             </div>
